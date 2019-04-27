@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>IAT Example</title>
   <script src="jspsych-6.0.5/jspsych.js"></script>
   <script src="jspsych-6.0.5/plugins/jspsych-iat-image.js"></script>
@@ -14,43 +15,42 @@
 
 var welcome_block = {
   type: 'html-keyboard-response',
-  stimulus: '<p> Dobrý den, In this study you will ' +
-  'complete an Implicit Association Test (IAT) in which you ' +
-  'will be asked to sort pictures and words into groups as ' +
-  'fast as you can.</p><p>Press any key to begin.</p>',
+  stimulus: '<p> Dobrý den! ' + 'Vítejte na stránce experimentu výzkumné laboratoře BERLAB, která mapuje osobní preference dopravních prostředků. ' +
+  'Tento implicitní test asociací je zcela anonymní, jeho dokončení by mělo zabrat okolo 10 minut. ' +
+  'Na konci se Vám zobrazí výsledek společně s jeho interpretací. </p><p> Pokud chcete pokračovat, stiskněte prosím libovolné tlačítko na klávesnici.</p>',
   post_trial_gap: 1500
 };
 
 var category_block = {
   type: 'html-keyboard-response',
-  stimulus: '<p>Next, you will use the "E" and "I" computer keys ' + 'to categorize items into groups as fast as you can. ' +
-  'These are the four groups and the items that belong to each:<br><br>' +
-  '<strong>Good</strong>:<br>' + 'Fabulous, Excitement, Glorious, Cheerful, Cherish, ' +
-  'Enjoy, Delightful, Joyous<br><br>' + '<strong>Bad</strong>:<br>' + 'Humiliate, ' +
-  'Evil, Grief, Yucky, Detest, Poison, Abuse, Despise<br><br>' +
-  '<strong>Old</strong>:<br>' + "<img src='img/age/of1.jpg'></img>  " +
+  stimulus: '<p>Nyní budete používat tlačítka "E" a "I" na klávesnici k tomu, abyste co nejrychleji roztřídili položky do skupin. ' +
+  'Tento test zahrnuje celkem čtyři skupiny, z nichž každá obsahuje buďto slova nebo obrázky, jak ukazuje následující schéma:<br><br>' +
+  '<strong>Dobrý</strong>:<br>' + 'Přitažlivý, Láska, Radostný, Smích, Usměvavý, ' +
+  'Přítel, Milý, Nadšený<br><br>' + '<strong>Špatný</strong>:<br>' + 'Prohnilý, ' +
+  'Nenávist, Ponížit, Strašlivý, Sobecký, Negativní, Otravný, Katastrofa<br><br>' +
+  '<strong>Městská hromadná doprava</strong>:<br>' + "<img src='img/age/of1.jpg'></img>  " +
   "<img src='img/age/of2.jpg'></img>  " + "<img src='img/age/of3.jpg'></img>  " +
   "<img src='img/age/om1.jpg'></img>  " + "<img src='img/age/om2.jpg'></img>  " +
-  "<img src='img/age/om3.jpg'></img><br><br>" + '<strong>Young</strong>:<br>' +
+  "<img src='img/age/om3.jpg'></img><br><br>" + '<strong>Automobily</strong>:<br>' +
   "<img src='img/age/yf1.jpg'></img>  " + "<img src='img/age/yf4.jpg'></img>  " +
   "<img src='img/age/yf5.jpg'></img>  " + "<img src='img/age/ym2.jpg'></img>  " +
   "<img src='img/age/ym3.jpg'></img>  " + "<img src='img/age/ym5.jpg'></img><br><br>" +
-  "Press any key to continue.</p>",
+  "Úloha má sedm částí. Dávejte pozor! Instrukce se liší u každé části.</p>" +
+  "<p>Pro pokračování stiskněte libovolnou klávesu.</p>",
   post_trial_gap: 1500
 };
 
 var instructions_block = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'><p>Press E for:<br><strong>OLD</strong></p></div>" +
-  "<div style='position: absolute; top: 18%; right: 20%'><p>Press I for:<br><strong>YOUNG</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Put a left finger on the <strong>E</strong> key for items that belong to the Old People category. Put a right finger on the " +
-  "<strong>I</strong> key for items that belong to the Young People " +
-  "category. Items will appear one at a time.<br><br>" + "If you " +
-  "make a mistake, a red X will appear. Press the keys listed below " +
-  "to continue. Go as fast as you can while being accurate.<br><br> " +
-  "Press the any key when you are ready to start.</div>",
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'><p>Používejte klávesu E pro:<br><strong>Městskou hromadnou dopravu</strong></p></div>" +
+  "<div style='position: absolute; top: 18%; right: 20%'><p>Používejte klávesu I pro:<br><strong>Automobily</strong></p></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie městské hromadné dopravy. Položte prst pravé ruky na klávesu" +
+  "<strong>I</strong> pro zaznamenání položky, která náleží do kategorie automobilů.  " +
+  "Položky se budou zobrazovat po jedné.<br><br> " +
+  "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
+  "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
+  "Stiskněte libovolnou klávesu, až budete připraveni s testem začít. </div>",
 };
-
 
 var trial_block = {
   timeline: [

@@ -42,14 +42,14 @@ var category_block = {
 
 var instructions_block = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'><p>Používejte klávesu E pro:<br><strong>Městskou hromadnou dopravu</strong></p></div>" +
-  "<div style='position: absolute; top: 18%; right: 20%'><p>Používejte klávesu I pro:<br><strong>Automobily</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie městské hromadné dopravy. Položte prst pravé ruky na klávesu" +
-  "<strong>I</strong> pro zaznamenání položky, která náleží do kategorie automobilů.  " +
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'><p>Stiskněte E pro:<br><strong>MHD</strong></p></div>" +
+  "<div style='position: absolute; top: 18%; right: 20%'><p>Stiskněte I pro:<br><strong>Automobil</strong></p></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie Městská hromadná doprava (MHD). Položte prst pravé ruky na klávesu " +
+  "<strong>I</strong> pro zaznamenání položky, která náleží do kategorie Automobily.  " +
   "Položky se budou zobrazovat po jedné.<br><br> " +
   "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
   "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
-  "Stiskněte libovolnou klávesu, až budete připraveni s testem začít. </div>",
+  "Stiskněte libovolnou klávesu, až budete připraven(a) s testem začít. </div>",
 };
 
 var trial_block = {
@@ -59,14 +59,14 @@ var trial_block = {
       stimulus: jsPsych.timelineVariable('stimulus'),
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
-      bottom_instructions: '<p>If you press the wrong key, a red X will appear. Press the other key to continue</p>',
+      bottom_instructions: '<p>Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu.</p>',
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000, //Only if display_feedback is false
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['OLD'],
-      right_category_label: ['YOUNG'],
+      left_category_label: ['MHD'],
+      right_category_label: ['Automobil'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
     }
@@ -88,18 +88,18 @@ var trial_block = {
   randomize_order: true,
   repetitions: 2
 };
-
+  
 var instructions_block2 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br><strong>BAD</strong></div>" +
-  "<div style='position: absolute; top: 18%; right: 20%'>Press I for:<br><strong>GOOD</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Put a left finger on the <strong>E</strong> key for items that " +
-  "belong to the Bad category. Put a right finger on the " +
-  "<strong>I</strong> key for items that belong to the Good " +
-  "category. Items will appear one at a time.<br><br>" + "If you " +
-  "make a mistake, a red X will appear. Press the keys listed below " +
-  "to continue. Go as fast as you can while being accurate.<br><br> " +
-  "Press the any key when you are ready to start.</div>",
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br><strong>Špatný</strong></div>" +
+  "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br><strong>Dobrý</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie Špatný. " +
+  "Položte prst pravé ruky na klávesu " +
+  "<strong>I</strong> pro zaznamenání položky, která náleží do kategorie Dobrý. " +
+  "Položky se budou zobrazovat po jedné. " +
+  "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu." +
+  "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
+  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>",
 };
 
 var trial_block2 = {
@@ -109,35 +109,35 @@ var trial_block2 = {
       stimulus: jsPsych.timelineVariable('stimulus'),
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
-      bottom_instructions: '<p>If you press the wrong key, a red X will appear. Press the other key to continue</p>',
+      bottom_instructions: '<p>Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu.</p>',
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000, //Only if display_feedback is false
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['BAD'],
-      right_category_label: ['GOOD'],
+      left_category_label: ['Špatný'],
+      right_category_label: ['Dobrý'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
     }
   ],
   timeline_variables: [
-    {stimulus: "Humiliate", stim_key_association: "left"},
-    {stimulus: "Evil", stim_key_association: "left"},
-    {stimulus: "Grief", stim_key_association: "left"},
-    {stimulus: "Yucky", stim_key_association: "left"},
-    {stimulus: "Detest", stim_key_association: "left"},
-    {stimulus: "Poison", stim_key_association: "left"},
-    {stimulus: "Abuse", stim_key_association: "left"},
-    {stimulus: "Despise", stim_key_association: "left"},
-    {stimulus: "Fabulous", stim_key_association: "right"},
-    {stimulus: "Excitement", stim_key_association: "right"},
-    {stimulus: "Glorious", stim_key_association: "right"},
-    {stimulus: "Cheerful", stim_key_association: "right"},
-    {stimulus: "Cherish", stim_key_association: "right"},
-    {stimulus: "Enjoy", stim_key_association: "right"},
-    {stimulus: "Delightful", stim_key_association: "right"},
-    {stimulus: "Joyous", stim_key_association: "right"}
+    {stimulus: "Prohnilý", stim_key_association: "left"},
+    {stimulus: "Nenávist", stim_key_association: "left"},
+    {stimulus: "Ponížit", stim_key_association: "left"},
+    {stimulus: "Strašlivý", stim_key_association: "left"},
+    {stimulus: "Sobecký", stim_key_association: "left"},
+    {stimulus: "Negativní", stim_key_association: "left"},
+    {stimulus: "Otravný", stim_key_association: "left"},
+    {stimulus: "Katastrofa", stim_key_association: "left"},
+    {stimulus: "Přitažlivý", stim_key_association: "right"},
+    {stimulus: "Láska", stim_key_association: "right"},
+    {stimulus: "Radostný", stim_key_association: "right"},
+    {stimulus: "Smích", stim_key_association: "right"},
+    {stimulus: "Usměvavý", stim_key_association: "right"},
+    {stimulus: "Přítel", stim_key_association: "right"},
+    {stimulus: "Milý", stim_key_association: "right"},
+    {stimulus: "Nadšený", stim_key_association: "right"}
   ],
   randomize_order: true,
   repetitions: 2
@@ -145,15 +145,15 @@ var trial_block2 = {
 
 var instructions_block3 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br> " +
-  "<strong>BAD</strong><br>" + "or<br>" + "<strong>OLD</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" + "<strong>YOUNG</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Use <strong>E</strong> for Bad and for " +
-  "Old People<br>" + "Use <strong>I</strong> for Good and for Young People<br>" +
-  "Each item belongs to only one category.<br><br>" + "If you " +
-  "make a mistake, a red X will appear. Press the keys listed below " +
-  "to continue. Go as fast as you can while being accurate.<br><br> " +
-  "Press the any key when you are ready to start.</div>",
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br> " +
+  "<strong>Špatný</strong><br>" + "nebo<br>" + "<strong>MHD</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "Stiskněte I pro:<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" + "<strong>Automobil</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Stiskněte klávesu <strong>E</strong> pro kategorie " +
+  "Špatný a Městská hromadná doprava. <br>" + "Stiskněte klávesu <strong>I</strong> pro kategorie Dobrý a Automobily. <br>" +
+  "Každá položka patří pouze do jedné skupiny." +
+  "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu." +
+  "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
+  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>",
 };
 
 var trial_block3 = {
@@ -163,14 +163,14 @@ var trial_block3 = {
       stimulus: jsPsych.timelineVariable('stimulus'),
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
-      bottom_instructions: '<p>If you press the wrong key, a red X will appear. Press the other key to continue</p>',
+      bottom_instructions: '<p>Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu.</p>',
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000, //Only if display_feedback is false
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['BAD', 'OLD'],
-      right_category_label: ['GOOD', 'YOUNG'],
+      left_category_label: ['Špatný', 'MHD'],
+      right_category_label: ['Dobrý', 'Automobil'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
     }
@@ -188,22 +188,22 @@ var trial_block3 = {
     {type: 'iat-image', stimulus: "img/age/ym2.jpg", stim_key_association: "right"},
     {type: 'iat-image', stimulus: "img/age/ym3.jpg", stim_key_association: "right"},
     {type: 'iat-image', stimulus: "img/age/ym5.jpg", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Humiliate", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Evil", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Grief", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Yucky", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Detest", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Poison", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Abuse", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Despise", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Fabulous", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Excitement", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Glorious", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Cheerful", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Cherish", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Enjoy", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Delightful", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Joyous", stim_key_association: "right"}
+    {type: 'iat-html', stimulus: "Prohnilý", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Nenávist", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Ponížit", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Strašlivý", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Sobecký", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Negativní", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Otravný", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Katastrofa", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Přitažlivý", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Láska", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Radostný", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Smích", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Usměvavý", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Přítel", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Milý", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Nadšený", stim_key_association: "right"}
   ],
   randomize_order: true,
   repetitions: 1
@@ -211,15 +211,15 @@ var trial_block3 = {
 
 var instructions_block4 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br> " +
-  "<strong>BAD</strong><br>" + "or<br>" + "<strong>OLD</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" + "<strong>YOUNG</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>This is the same as the previous part.<br>" + "Use <strong>E</strong> for Bad and for " +
-  "Old People<br>" + "Use <strong>I</strong> for Good and for Young People<br>" +
-  "Each item belongs to only one category.<br><br>" + "If you " +
-  "make a mistake, a red X will appear. Press the keys listed below " +
-  "to continue. Go as fast as you can while being accurate.<br><br> " +
-  "Press the any key when you are ready to start.</div>",
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br> " +
+  "<strong>Špatný</strong><br>" + "nebo<br>" + "<strong>MHD</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "Stiskněte I pro::<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" + "<strong>Automobil</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Tato část je stejná jako část předchozí.<br>" + "Stiskněte klávesu <strong>E</strong> pro kategorie Špatný nebo MHD. <br>"
+  + "Stiskněte klávesu <strong>I</strong> pro kategorie Dobrý nebo Automobil. <br>" +
+  "Každá položka patří pouze do jedné skupiny.<br><br>" +
+  "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu." +
+  "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
+  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>",
 };
 
 var trial_block4 = {
@@ -230,14 +230,14 @@ var trial_block4 = {
         stimulus: jsPsych.timelineVariable('stimulus'),
         stim_key_association: jsPsych.timelineVariable('stim_key_association'),
         html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
-        bottom_instructions: '<p>If you press the wrong key, a red X will appear. Press the other key to continue</p>',
+        bottom_instructions: '<p>Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu.</p>',
         force_correct_key_press: true,
         display_feedback: true,
         trial_duration: 3000, //Only if display_feedback is false
         left_category_key: 'E',
         right_category_key: 'I',
-        left_category_label: ['BAD', 'OLD'],
-        right_category_label: ['GOOD', 'YOUNG'],
+        left_category_label: ['Špatný', 'MHD'],
+        right_category_label: ['Dobrý', 'Automobil'],
         response_ends_trial: true,
         data: { iat_type: 'bad-old' }
       }
@@ -255,22 +255,22 @@ var trial_block4 = {
       {type: 'iat-image', stimulus: "img/age/ym2.jpg", stim_key_association: "right"},
       {type: 'iat-image', stimulus: "img/age/ym3.jpg", stim_key_association: "right"},
       {type: 'iat-image', stimulus: "img/age/ym5.jpg", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Humiliate", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Evil", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Grief", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Yucky", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Detest", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Poison", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Abuse", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Despise", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Fabulous", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Excitement", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Glorious", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Cheerful", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Cherish", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Enjoy", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Delightful", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Joyous", stim_key_association: "right"}
+      {type: 'iat-html', stimulus: "Prohnilý", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Nenávist", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Ponížit", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Strašlivý", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Sobecký", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Negativní", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Otravný", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Katastrofa", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Přitažlivý", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Láska", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Radostný", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Smích", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Usměvavý", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Přítel", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Milý", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Nadšený", stim_key_association: "right"}
     ],
     randomize_order: true,
     repetitions: 2

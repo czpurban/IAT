@@ -114,10 +114,10 @@
     html_str += "<div id='trial_left_align' style='position: absolute; top: 18%; left: 20%'>";
 
     if(trial.left_category_label.length == 1) {
-      html_str += "<p>Press " + trial.left_category_key + " for:<br> " +
+      html_str += "<p>Stisknete " + trial.left_category_key + " pro:<br> " +
       trial.left_category_label[0].bold() + "</p></div>";
     } else {
-      html_str += "<p>Press " + trial.left_category_key + " for:<br> " +
+      html_str += "<p>Stisknete " + trial.left_category_key + " pro:<br> " +
       trial.left_category_label[0].bold() + "<br>" + "or<br>" +
       trial.left_category_label[1].bold() + "</p></div>";
     }
@@ -125,10 +125,10 @@
     html_str += "<div id='trial_right_align' style='position: absolute; top: 18%; right: 20%'>";
 
     if(trial.right_category_label.length == 1) {
-      html_str += "<p>Press " + trial.right_category_key + " for:<br> " +
+      html_str += "<p>Stisknete " + trial.right_category_key + " pro:<br> " +
       trial.right_category_label[0].bold() + '</p></div>';
     } else {
-      html_str += "<p>Press " + trial.right_category_key + " for:<br> " +
+      html_str += "<p>Stisknete " + trial.right_category_key + " pro:<br> " +
       trial.right_category_label[0].bold() + "<br>" + "or<br>" +
       trial.right_category_label[1].bold() + "</p></div>";
     }

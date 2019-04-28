@@ -474,11 +474,11 @@ var trial_block7 = {
 
       var d = (mean_correct_responses_bad_young - mean_correct_responses_bad_old) / sd;
 
-      return "<p>You're done! Below is some information about how you performed.</p>"+
-        "<p>When the pairs were BAD/YOUNG and GOOD/OLD, it took you an average of <strong>"+Math.floor(mean_correct_responses_bad_young)+"ms</strong> to respond.</p>"+
-        "<p>When the pairs were BAD/OLD and GOOD/YOUNG, it took you an average of <strong>"+Math.floor(mean_correct_responses_bad_old)+"ms</strong> to respond.</p>"+
-        "<p>Your D score, an index of performance that takes into account this difference and the overall level of variability in your responses, is <strong>"+d.toFixed(2)+"</strong></p>"+
-        "<p>For reference, the Project Implicit IAT website labels D scores above 0.15 as a slight bias, scores above 0.35 as a moderate bias, and scores above 0.65 a strong bias.</p>"
+      return "<p>Jste u konce! Děkujeme za dokončení experimentu! Níže naleznete výsledek testování.</p>"+
+        "<p>U dvojic Špatný/Automobil a Dobrý/MHD Vám reakce trvala v průměru <strong>"+Math.floor(mean_correct_responses_bad_young)+"ms</strong></p>"+
+        "<p>U dvojic Špatný/MHD a Dobrý/Automobil Vám reakce trvala v průměru <strong>"+Math.floor(mean_correct_responses_bad_old)+"ms</strong> to respond.</p>"+
+        "<p>Vaše skóre D, tj. index výkonnosti, který zohledňuje rozdíl průměrů a celkovou míru variability ve Vašich odpovědích, je <strong>"+d.toFixed(2)+"</strong></p>"+
+        "<p>Dle webových stránek Project Implicit IAT značí skóre D vyšší než 0,15 mírnou předpojatost, vyšší než 0,35 střední předpojatost a skóre vyšší než 0,65 silnou předpojatost. </p>"
     }
   };
 

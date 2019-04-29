@@ -42,14 +42,14 @@ var category_block = {
 
 var instructions_block = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'><p>Stiskněte E pro:<br><strong>MHD</strong></p></div>" +
-  "<div style='position: absolute; top: 18%; right: 20%'><p>Stiskněte I pro:<br><strong>Automobil</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie Městská hromadná doprava (MHD). Položte prst pravé ruky na klávesu " +
-  "<strong>I</strong> pro zaznamenání položky, která náleží do kategorie Automobily.  " +
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'><p>Stiskněte E pro:<br><strong>MHD</strong></p></div><br>" +
+  "<div style='position: absolute; top: 18%; right: 20%'><p>Stiskněte I pro:<br><strong>Automobil</strong></p></div><br>" +
+  "<p><div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie Městská hromadná doprava (MHD). <br> Položte prst pravé ruky na klávesu " +
+  "<strong>I</strong> pro zaznamenání položky, která náleží do kategorie Automobily.<br><br>  " +
   "Položky se budou zobrazovat po jedné.<br><br> " +
   "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
   "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
-  "Stiskněte libovolnou klávesu, až budete připraven(a) s testem začít. </div>",
+  "Stiskněte libovolnou klávesu, až budete připraven(a) s testem začít. </div></p>",
 };
 
 
@@ -92,15 +92,15 @@ var trial_block = {
 
 var instructions_block2 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br><strong>Špatný</strong></div>" +
-  "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br><strong>Dobrý</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie Špatný. " +
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br><strong>Špatný</strong></div><br>" +
+  "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br><strong>Dobrý</strong></div><br>" +
+  "<p><div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie Špatný. <br> " +
   "Položte prst pravé ruky na klávesu " +
-  "<strong>I</strong> pro zaznamenání položky, která náleží do kategorie Dobrý. " +
-  "Položky se budou zobrazovat po jedné. " +
+  "<strong>I</strong> pro zaznamenání položky, která náleží do kategorie Dobrý. <br><br>" +
+  "Položky se budou zobrazovat po jedné. <br><br> " +
   "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
   "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
-  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>",
+  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div></p>",
 };
 
 var trial_block2 = {
@@ -147,14 +147,14 @@ var trial_block2 = {
 var instructions_block3 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br> " +
-  "<strong>Špatný</strong><br>" + "nebo<br>" + "<strong>MHD</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "Stiskněte I pro:<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" + "<strong>Automobil</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Stiskněte klávesu <strong>E</strong> pro kategorii " +
-  "Špatný a Městská hromadná doprava. <br>" + "Stiskněte klávesu <strong>I</strong> pro kategorii Dobrý a Automobily. <br>" +
-  "Každá položka patří pouze do jedné skupiny. " +
+  "<strong>Špatný</strong><br>" + "nebo<br>" + "<strong>MHD</strong></div><br><br>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "Stiskněte I pro:<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" + "<strong>Automobil</strong></div><br><br>" +
+  "<p><div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Stiskněte klávesu <strong>E</strong> pro kategorii " +
+  "Špatný a Městská hromadná doprava. <br>" + "Stiskněte klávesu <strong>I</strong> pro kategorii Dobrý a Automobily. <br><br>" +
+  "Každá položka patří pouze do jedné skupiny.<br><br> " +
   "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
   "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
-  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>",
+  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div></p>",
 };
 
 var trial_block3 = {
@@ -213,14 +213,14 @@ var trial_block3 = {
 var instructions_block4 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br> " +
-  "<strong>Špatný</strong><br>" + "nebo<br>" + "<strong>MHD</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "Stiskněte I pro::<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" + "<strong>Automobil</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Tato část je stejná jako část předchozí.<br>" + "Stiskněte klávesu <strong>E</strong> pro kategorii Špatný nebo MHD. <br>"
-  + "Stiskněte klávesu <strong>I</strong> pro kategorii Dobrý nebo Automobil. <br>" +
+  "<strong>Špatný</strong><br>" + "nebo<br>" + "<strong>MHD</strong></div><br><br>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "Stiskněte I pro::<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" + "<strong>Automobil</strong></div><br><br>" +
+  "<p><div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Tato část je stejná jako část předchozí.<br><br>" + "Stiskněte klávesu <strong>E</strong> pro kategorii Špatný nebo MHD. <br>"
+  + "Stiskněte klávesu <strong>I</strong> pro kategorii Dobrý nebo Automobil. <br><br>" +
   "Každá položka patří pouze do jedné skupiny.<br><br>" +
   "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
   "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
-  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>",
+  "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div></p>",
 };
 
 var trial_block4 = {
@@ -279,13 +279,13 @@ var trial_block4 = {
 
   var instructions_block5 = {
     type: 'html-keyboard-response',
-    stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br>" + "<strong>Automobil</strong></div>" +
-    "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br>" + "<strong>MHD</strong></div>" +
-    "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>Pozor, označení skupin má nyní prohozenou pozici!</strong><br>" +
+    stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br>" + "<strong>Automobil</strong></div><br><br>" +
+    "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br>" + "<strong>MHD</strong></div><br><br>" +
+    "<p><div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>Pozor, označení skupin má nyní prohozenou pozici!</strong><br><br>" +
     "Položte prst levé ruky na klávesu <strong>E</strong> pro zaznamenání položky, která náleží do kategorie Automobily. <br>" + "Položte prst pravé ruky na klávesu <strong>I</strong> pro zaznamenání položky, která náleží do kategorie MHD.<br><br>" +
     "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
     "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
-    "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>"
+    "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div></p>"
   };
 
   var trial_block5 = {
@@ -329,13 +329,13 @@ var trial_block4 = {
   var instructions_block6 = {
     type: 'html-keyboard-response',
     stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br>" + "<strong>Špatný</strong><br>" + "nebo<br>" +
-    "<strong>Automobil</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" +
-    "<strong>MHD</strong></div>" +
-    "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Stiskněte klávesu <strong>E</strong> pro kategorii Špatný nebo Automobil.<br>" +
+    "<strong>Automobil</strong></div><br><br>" + "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" +
+    "<strong>MHD</strong></div><br><br>" +
+    "<p><div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Stiskněte klávesu <strong>E</strong> pro kategorii Špatný nebo Automobil.<br>" +
     "Stiskněte klávesu <strong>I</strong> pro kategorii Dobrý nebo MHD.<br><br>" +
     "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
     "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
-    "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>"
+    "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div></p>"
   };
 
   var trial_block6 = {
@@ -394,15 +394,15 @@ var trial_block4 = {
   var instructions_block7 = {
     type: 'html-keyboard-response',
     stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Stiskněte E pro:<br>" + "<strong>Špatný</strong><br>" + "nebo<br>" +
-    "<strong>Automobil</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" +
-    "<strong>MHD</strong></div>" +
-    "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Tato část je stejná jako část předchozí.<br>" +
+    "<strong>Automobil</strong></div><br><br>" + "<div style='position: absolute; top: 18%; right: 20%'>Stiskněte I pro:<br>" + "<strong>Dobrý</strong><br>" + "nebo<br>" +
+    "<strong>MHD</strong></div><br><br>" +
+    "<p><div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Tato část je stejná jako část předchozí.<br><br>" +
     "Stiskněte klávesu <strong>E</strong> pro kategorii Špatný nebo Automobil.<br>" +
-    "Stiskněte klávesu <strong>I</strong> pro kategorii Dobrý nebo MHD<br>" +
+    "Stiskněte klávesu <strong>I</strong> pro kategorii Dobrý nebo MHD.<br><br>" +
     "Každá položka patří pouze do jedné skupiny.<br><br>" +
     "Pokud uděláte chybu, objeví se červené X. Abyste mohl(a) pokračovat, musíte zmáčknout druhou klávesu. " +
     "Odpovídejte co nejrychleji, ale přesně.<br><br> " +
-    "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div>"
+    "Stiskněte libovolnou klávesu, až budete připraven(a) pokračovat.</div></p>"
   };
 
 var trial_block7 = {
@@ -475,9 +475,9 @@ var trial_block7 = {
       var d = (mean_correct_responses_bad_young - mean_correct_responses_bad_old) / sd;
 
       return "<p>Jste u konce! Děkujeme za dokončení experimentu! Níže naleznete výsledek testování.</p>"+
-        "<p>U dvojic Špatný/Automobil a Dobrý/MHD Vám reakce trvala v průměru <strong>"+Math.floor(mean_correct_responses_bad_young)+"ms</strong></p>"+
-        "<p>U dvojic Špatný/MHD a Dobrý/Automobil Vám reakce trvala v průměru <strong>"+Math.floor(mean_correct_responses_bad_old)+"ms</strong> to respond.</p>"+
-        "<p>Vaše skóre D, tj. index výkonnosti, který zohledňuje rozdíl průměrů a celkovou míru variability ve Vašich odpovědích, je <strong>"+d.toFixed(2)+"</strong></p>"+
+        "<p>U dvojic Špatný/Automobil a Dobrý/MHD Vám reakce trvala v průměru <strong>"+Math.floor(mean_correct_responses_bad_young)+"ms</strong>.</p>"+
+        "<p>U dvojic Špatný/MHD a Dobrý/Automobil Vám reakce trvala v průměru <strong>"+Math.floor(mean_correct_responses_bad_old)+"ms</strong>.</p>"+
+        "<p>Vaše skóre D, tj. index výkonnosti, který zohledňuje rozdíl průměrů a celkovou míru variability ve Vašich odpovědích, je <strong>"+d.toFixed(2)+"</strong>.</p>"+
         "<p>Dle webových stránek Project Implicit IAT značí skóre D vyšší než 0,15 mírnou předpojatost, vyšší než 0,35 střední předpojatost a skóre vyšší než 0,65 silnou předpojatost. </p>"
     }
   };
